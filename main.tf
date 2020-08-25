@@ -41,7 +41,7 @@ resource "azurerm_virtual_machine" "instance" {
     managed_disk_type = "Standard_LRS"
   }
   os_profile {
-    computer_name  = "${var.name}"
+    computer_name  = var.name
     admin_username = "ubuntu"
   }
   os_profile_linux_config {
