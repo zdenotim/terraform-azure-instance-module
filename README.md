@@ -40,5 +40,4 @@ This module will return the following outputs:
 key | description
 :---|:---
 vm | The created VM as an object with all of it's attributes. This was created using the azurerm_virtual_machine resource.
-pub_ip | The created Public IP as an object with all of it's attributes. This was created using the azurerm_public_ip resource.
 nic | The created NIC as an object with all of it's attributes. This was created using the azurerm_network_interface resource.

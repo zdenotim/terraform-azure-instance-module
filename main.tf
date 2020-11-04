@@ -1,10 +1,9 @@
-resource "azurerm_public_ip" "pub_ip" {
+/* resource "azurerm_public_ip" "pub_ip" {
   name                = "${var.name}-pub_ip"
   location            = var.region
   resource_group_name = var.rg
   allocation_method   = "Dynamic"
-}
-
+} */
 resource "azurerm_network_interface" "nic" {
   name                = "${var.name}-nic"
   location            = var.region
@@ -12,9 +11,9 @@ resource "azurerm_network_interface" "nic" {
 
   ip_configuration {
     name                          = "${var.name}-nic"
-    subnet_id                     = var.subnet #data.azurerm_subnet.subnet.id
+    subnet_id                     = var.subnet
     private_ip_address_allocation = "Dynamic"
-    public_ip_address_id          = azurerm_public_ip.pub_ip.id
+    #public_ip_address_id          = azurerm_public_ip.pub_ip.id
   }
 }
 
