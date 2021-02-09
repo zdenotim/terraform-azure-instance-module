@@ -34,6 +34,17 @@ resource "azurerm_network_security_group" "nsg" {
     destination_address_prefix = "*"
   }
   security_rule {
+    name                       = "HTTPS"
+    priority                   = 1005
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "TCP"
+    source_port_range          = "*"
+    destination_port_range     = "443"
+    source_address_prefix      = "*"
+    destination_address_prefix = "*"
+  }
+  security_rule {
     name                       = "IPERF"
     priority                   = 1005
     direction                  = "Inbound"
@@ -97,6 +108,7 @@ resource "azurerm_virtual_machine" "instance" {
   os_profile {
     computer_name  = var.name
     admin_username = "ubuntu"
+    custom_data    = var.cloud_init_data
   }
   os_profile_linux_config {
     disable_password_authentication = true

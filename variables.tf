@@ -22,6 +22,9 @@ variable "ssh_key" {
   type = string
 }
 
+variable "cloud_init_data" {
+  default = ""
+}
 variable "instance_size" {
   type    = string
   default = "Standard_B1ls"

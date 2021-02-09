@@ -33,6 +33,7 @@ The following variables are optional:
 key | default | value 
 :---|:---|:---
 instance_size | Standard_B1ls | The size of the Azure VM instance
+cloud_init_data | | cloud init data
 
 ### Outputs
 This module will return the following outputs:
