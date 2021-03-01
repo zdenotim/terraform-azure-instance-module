@@ -46,7 +46,7 @@ resource "azurerm_network_security_group" "nsg" {
   }
   security_rule {
     name                       = "IPERF"
-    priority                   = 1005
+    priority                   = 1006
     direction                  = "Inbound"
     access                     = "Allow"
     protocol                   = "TCP"
@@ -57,7 +57,7 @@ resource "azurerm_network_security_group" "nsg" {
   }
   security_rule {
     name                       = "IPERF3"
-    priority                   = 1006
+    priority                   = 1007
     direction                  = "Inbound"
     access                     = "Allow"
     protocol                   = "TCP"
@@ -68,7 +68,7 @@ resource "azurerm_network_security_group" "nsg" {
   }
   security_rule {
     name                       = "ICMP"
-    priority                   = 1007
+    priority                   = 1008
     direction                  = "Inbound"
     access                     = "Allow"
     protocol                   = "ICMP"
